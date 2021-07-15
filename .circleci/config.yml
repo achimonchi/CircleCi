@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/golang:1.15
-    working_directory: $PWD
+    working_directory: /go/src/github.com/achimonchi/CircleCi
     steps:
       - checkout
       - run: go test -v ./...
