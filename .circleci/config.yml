@@ -1,0 +1,9 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/golang:1.15
+    working_directory: $(PWD)
+    steps:
+      - checkout
+      - run: go test -v ./...
