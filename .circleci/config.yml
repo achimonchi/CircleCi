@@ -9,3 +9,4 @@ jobs:
       - setup_remote_docker:
           version: 19.03.13
       - run: make test
+      - run: go version
