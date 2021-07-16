@@ -8,10 +8,11 @@ run:
 	docker run -d --name belajar-circleci -p 4000:4000 achimonchi/circleci
 
 test:
-	docker run -v $(PWD):/ws \
+	docker run --name go-test -v $(PWD):/ws \
 		--workdir=/ws \
      	golang:1.12.1 \
-   		/bin/bash -c "GOPROXY=off go test -v -mod=vendor ./..."
+   		/bin/bash -c "go test -v  ./..."
+	docker rm -f go-test
 
 remove: 
 	docker rm -f belajar-circleci
