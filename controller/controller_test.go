@@ -9,7 +9,7 @@ import (
 func TestGetData(t *testing.T) {
 	var user entity.User
 	user.Email = "reyhan.jovie@dana.id"
-	user.Name = "Reyhan Jovie"
+	user.Name = "Reyhan Jovi"
 
 	data := GetData()
 	// assert.Equal(t, data, user, "Harus sama")
