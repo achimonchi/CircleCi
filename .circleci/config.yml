@@ -4,9 +4,13 @@ jobs:
     docker:
       - image: circleci/golang:1.15
     working_directory: /go/src/github.com/achimonchi/CircleCi
+    environtment:
+      TEST_RESULTS: /tmp/test-results
     steps:
       - checkout
       - setup_remote_docker:
           version: 19.03.13
-      - run: make test
+      - run: 
+          name: Run unit test
+          command: make test
       - run: go version
