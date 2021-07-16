@@ -12,6 +12,8 @@ test:
 		--workdir=/ws \
      	golang:1.12.1 \
    		/bin/bash -c "ls "
+	ls
+	pwd
 	docker rm -f go-test
 
 remove: 
