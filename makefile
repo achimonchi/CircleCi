@@ -8,13 +8,14 @@ run:
 	docker run -d --name belajar-circleci -p 4000:4000 achimonchi/circleci
 
 test:
-	docker run --name go-test -v $(PWD):/ws \
-		--workdir=/ws \
-     	golang:1.12.1 \
-   		/bin/bash -c "ls "
-	ls
-	pwd
-	docker rm -f go-test
+	# docker run --name go-test -v $(PWD):/ws \
+	# 	--workdir=/ws \
+    #  	golang:1.12.1 \
+   	# 	/bin/bash -c "ls "
+	# ls
+	# pwd
+	# docker rm -f go-test
+	go test -v ./...
 
 remove: 
 	docker rm -f belajar-circleci
