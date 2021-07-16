@@ -11,7 +11,7 @@ test:
 	docker run --name go-test -v $(PWD):/ws \
 		--workdir=/ws \
      	golang:1.12.1 \
-   		/bin/bash -c "go test -v /ws/..."
+   		/bin/bash -c "ls "
 	docker rm -f go-test
 
 remove: 
